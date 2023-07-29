@@ -1,0 +1,56 @@
+.background{
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 470px;
+  position: absolute;
+}
+.title{
+  top: 210px;
+  left: 200px;
+  color: rgba(255, 255, 255, 1);
+  width: 1088px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Work Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.title2{
+  top: 540px;
+  left: 350px;
+  color: rgba(39, 43, 64, 1);
+  width: 450px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.title3{
+  top:  780px;
+  left: 350px;
+  color: rgba(39, 43, 64, 1);
+  width: 375px;
+  height: auto;
+  position: absolute;
+  font-size: 35px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

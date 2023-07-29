@@ -1,0 +1,65 @@
+.supportContentContainer{
+    background: #E8E7DE;
+}
+.imageUrl{
+    display: block;
+    width: 324px;
+    height: 400px;
+}
+.imageUrlContainer{
+    height: 400px;
+}
+.container{
+    width: max-content;
+    height: max-content;
+        margin-left: 330px;
+}
+.container1{
+    padding-top: 60px;
+
+}
+.postContainer{
+    display: flex;
+    background: #ECEFED;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.10);
+    height: 400px;
+}
+.title{
+    color: #6B1A1A;
+    font-family: Work Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 30px;
+   
+}
+.subTitle{
+    padding-top: 30px;
+    color: #000;
+font-family: Work Sans;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.titleContainer{
+    display:block;
+    margin-left:30px;
+    margin-right:30px;
+}
+.description{
+    display: block;
+width: 487px;
+height: 257px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+padding-top: 40px;
+color: #6C7B8E;
+font-family: Work Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 35px;
+}

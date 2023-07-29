@@ -1,0 +1,7 @@
+.all {
+  background-color: #e1edf0;
+}
+
+.all * {
+  box-sizing: content-box;
+}

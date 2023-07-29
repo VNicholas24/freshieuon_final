@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: 1500px;
+  display: absolute;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(250, 246, 241, 1);
+}
