@@ -4,8 +4,8 @@ import classes from "./index.module.css"
 
 import "firebase/firestore";
 import { useEffect, useState, useCallback } from "react";
-import { Card, CardContent, Grid, Typography } from '@mui/material';
-import { collection, getFirestore, getDocs, ref, getStorage, getDownloadURL  } from "firebase/firestore";
+import { Grid } from '@mui/material';
+import { collection, getFirestore, getDocs} from "firebase/firestore";
 
 interface CoursesHeader{
     title : string,
@@ -15,8 +15,10 @@ interface CoursesHeader{
 
 interface Blog{
   id:string,
-  blogTitle:string;
+  title:string;
   compareImageUrl:string;
+  description :string;
+  imageUrl :string;
 }
 
 
@@ -65,7 +67,7 @@ export default function AccommodationCompare() {
   console.log('blogs', blogs)
   return (
     <div className={classes.all}>
-        <Header title={coursesHeader.title} description={coursesHeader.description} imageUrl={bannerImageUrl}></Header>
+        <Header title={coursesHeader.title} description={coursesHeader.description} imageUrl={bannerImageUrl} height={''}></Header>
         <div className={classes.cards}>
           <Grid container spacing={6} style={{ marginTop: '20px' }}>
             {blogs.map((_, index) => (

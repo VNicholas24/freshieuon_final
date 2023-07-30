@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import classes from "./serviceItem.module.css";
+import { serviceList } from "./serviceList";
 
 interface Service {
   id: string;
@@ -8,10 +9,12 @@ interface Service {
   description: string;
   iconUrl: string;
   pageUrl: string;
+  imageURL: string;
+  pageURL: string;
 }
 
 interface ServiceItemProps {
-  service: Service;
+  service: serviceList;
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
@@ -25,11 +28,11 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
     setHovered(false);
   };
 
-  if(!service.pageUrl){
-    service.pageUrl = ""
+  if(!service.pageURL){
+    service.pageURL = ""
   }
   return (
-    <Link href={service.pageUrl} passHref>
+    <Link href={service.pageURL} passHref>
       <div
         className={`${classes.serviceContainer} ${
           hovered ? classes.hovered : ""
@@ -38,7 +41,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className={classes.contentContainer}>
-          <img className={classes.image} src={service.iconUrl} alt="Image" />
+          <img className={classes.image} src={service.iconurl} alt="Image" />
           <h2 className={classes.title}>{service.title}</h2>
           <div
             className={`${classes.descriptionContainer} ${

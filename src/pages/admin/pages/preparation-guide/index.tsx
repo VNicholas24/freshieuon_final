@@ -182,7 +182,7 @@ export default function PreparationGuide() {
         <p>Page not found</p>
       ) : (
         <div className={classes.container}>
-          <Header id={blogTitle} blogTitle={blogTitle} urlArray={urlArray} />
+          <Header id={blogTitle} blogTitle={blogTitle} urlArray={urlArray} category={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>

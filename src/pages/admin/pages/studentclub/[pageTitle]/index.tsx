@@ -313,7 +313,7 @@ export default function DetailPage() {
         </div>
       ) : (
         <div className={classes.container}>
-          <Header id={page.id} category={page.pageTitle} urlArray={urlArray} />
+          <Header id={page.id} category={page.pageTitle} urlArray={urlArray} blogTitle={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>

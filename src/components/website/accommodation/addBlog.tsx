@@ -35,6 +35,10 @@ const AddBlog: FunctionComponent<writeProps> = () => {
     emptytext: false,
   });
   const timestamp = serverTimestamp();
+  const [headerTitle, setHeaderTitle] = useState("");
+  const [headerDescription, setHeaderDescription] = useState("");
+  const [headerImageUrl, setHeaderImageUrl] = useState("");
+  const [isImageUploaded, setIsImageUploaded] = useState(false);
 
   const postPage = async () => {
     if (text == "") {
@@ -91,7 +95,15 @@ const AddBlog: FunctionComponent<writeProps> = () => {
             />
             <h3 className={classes.sectionTitle}>Header</h3>
           </div>
-          <HeaderEdit></HeaderEdit>
+          <HeaderEdit 
+              headerTitle={headerTitle}
+              headerDescription={headerDescription}
+              headerImageUrl={headerImageUrl}
+              setBannerTitle={setHeaderTitle}
+              setBannerDescription={setHeaderDescription}
+              setBannerImageUrl={setHeaderImageUrl}
+              setIsImageUploaded={setIsImageUploaded}
+            />
           <SimpleMDE
             className={classes.simpleMde}
             value={text}

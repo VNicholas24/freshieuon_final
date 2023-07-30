@@ -2,8 +2,8 @@ import classes from "./index.module.css";
 import "firebase/firestore";
 import { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs, QuerySnapshot } from "firebase/firestore";
-import Header from "../../components/website/support/header";
 import Content from "@/components/website/support/content";
+import Header from "@/components/website/support/header";
 
 
 interface SupportHeader {

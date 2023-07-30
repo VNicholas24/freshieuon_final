@@ -4,6 +4,7 @@ interface HeaderProps {
   title: string;
   description: string;
   imageUrl: string;
+  height: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ title, description, imageUrl }) => {

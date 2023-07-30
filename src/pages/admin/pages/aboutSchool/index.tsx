@@ -270,7 +270,7 @@ export default function AboutUsPage() {
         <p>Page not found</p>
       ) : (
         <div className={classes.container}>
-          <Header id={page.id} category={page.pageTitle} urlArray={urlArray} />
+          <Header id={page.id} category={page.pageTitle} urlArray={urlArray} blogTitle={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>

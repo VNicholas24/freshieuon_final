@@ -214,7 +214,7 @@ export default function DetailPage() {
         <p>Page not found</p>
       ) : (
         <div className={classes.container}>
-          <Header urlArray={urlArray} />
+          <Header urlArray={urlArray} id={""} category={""} blogTitle={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>
@@ -257,8 +257,8 @@ export default function DetailPage() {
               <div style={{ color: "red" }}>
                 {errorstates.emptytext ? "Please enter text" : ""}
               </div>
-              <EditMidContent></EditMidContent>
-              <EditSectionContent></EditSectionContent>
+              <EditMidContent id={""} description={""} imageUrl={""}></EditMidContent>
+              <EditSectionContent id={""} title={""} description={""} imageUrl={""}></EditSectionContent>
               {/* Modal */}
               <Modal
                 open={isModalOpen}
@@ -278,13 +278,16 @@ export default function DetailPage() {
             </div>
             <div className={classes.sideBar}>
               <SideBar
-                postPage={postPage}
-                postHeader={postHeader}
-                isPublished={isPublishedGlobally}
-                postedBy={postedBy}
-                postedDate={createdAt}
-                setIsPublished={setisPublishedGlobally}
-              ></SideBar>
+                    postPage={postPage}
+                    postHeader={postHeader}
+                    isPublished={isPublishedGlobally}
+                    postedBy={postedBy}
+                    postedDate={createdAt}
+                    setIsPublished={setisPublishedGlobally} postPagePreview={function (): void {
+                      throw new Error("Function not implemented.");
+                    } } postHeaderPreview={function (): void {
+                      throw new Error("Function not implemented.");
+                    } }              ></SideBar>
             </div>
           </div>
         </div>

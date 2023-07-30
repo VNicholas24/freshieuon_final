@@ -316,7 +316,7 @@ export default function GettingAroundCampusPage() {
         <p>Page not found</p>
       ) : (
         <div className={classes.container}>
-          <Header id={blog.id} category={blog.blogTitle} urlArray={urlArray} />
+          <Header id={blog.id} category={blog.blogTitle} urlArray={urlArray} blogTitle={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>

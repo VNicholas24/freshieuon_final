@@ -7,12 +7,14 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import serviceItem from "@/pages/aboutus";
 import ServiceItem from "./serviceItem";
 
-interface serviceList {
+export interface serviceList {
   id: string;
   title: string;
   description: string;
   imageURL: string;
   pageURL: string;
+  iconurl: string;
+  pageurl: string;
 }
 
 export default function ServiceList() {

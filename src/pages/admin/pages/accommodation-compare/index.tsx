@@ -236,7 +236,7 @@ export default function AccommodationPage() {
        blog.blogTitle === "" ?
       <p>Page not found</p> :
       <div className={classes.container}>
-        <Header id={blog.id} blogTitle={blog.blogTitle} urlArray={urlArray} />
+        <Header id={blog.id} blogTitle={blog.blogTitle} urlArray={urlArray} category={""} />
         <div className={classes.flexContainer}>
           <div className={classes.bodyContainer}> 
             <div className={classes.upperSecContainer}>

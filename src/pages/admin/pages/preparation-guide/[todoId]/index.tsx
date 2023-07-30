@@ -364,7 +364,7 @@ export default function DetailPage() {
         <p>Page not found</p>
       ) : (
         <div className={classes.container}>
-          <Header id={todo.id} blogTitle={blogTitle} urlArray={urlArray} />
+          <Header id={todo.id} blogTitle={blogTitle} urlArray={urlArray} category={""} />
           <div className={classes.flexContainer}>
             <div className={classes.bodyContainer}>
               <div className={classes.upperSecContainer}>

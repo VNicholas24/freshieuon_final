@@ -69,8 +69,7 @@ export default function Accommodation() {
           <Header
             title={accommodationHeader.title}
             description={accommodationHeader.description}
-            imageUrl={accommodationHeader.imageUrl}
-          />
+            imageUrl={accommodationHeader.imageUrl} height={""}          />
           <AccommodationList preview={false} />
         </>
       ) : (

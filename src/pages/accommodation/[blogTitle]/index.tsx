@@ -75,8 +75,7 @@ export default function Blog() {
       <Header
         title={blogHeader.title}
         description={blogHeader.description}
-        imageUrl={blogHeader.imageUrl}
-      />
+        imageUrl={blogHeader.imageUrl} height={""}      />
       <div className={classes.markDownContainer}>
         <div className={classes.markDownLayer}>
           <ReactMarkdown className={classes.markdown}>{text}</ReactMarkdown>

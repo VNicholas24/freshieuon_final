@@ -31,6 +31,9 @@ interface Blog {
   name: string;
   slug: string;
   category: string;
+  createdAt: Timestamp;
+  postedBy: string;
+  isPublishedGlobally: boolean;
 }
 
 interface PageSection {
@@ -40,6 +43,7 @@ interface PageSection {
   description: string;
   detailedPageUrl: string;
   createdAt: Timestamp;
+  postedBy: string;
 }
 
 export default function SubPageSection() {
@@ -58,6 +62,7 @@ export default function SubPageSection() {
     description: "",
     detailedPageUrl: "",
     createdAt: createdAt,
+    postedBy: "",
   });
   const [errorstates, seterrorstates] = useState({
     sameslug: false,
@@ -70,6 +75,9 @@ export default function SubPageSection() {
     name: "",
     slug: "",
     category: "",
+    createdAt: createdAt,
+    postedBy: "",
+    isPublishedGlobally: false,
   });
   const [normalTodos, setNormalTodos] = useState<Blog[]>([]);
   const [todoBeforeWeek1, setTodoBeforeWeek1] = useState<Blog[]>([]);
@@ -245,6 +253,9 @@ export default function SubPageSection() {
             name: "",
             slug: "",
             category: "",
+            createdAt: Timestamp.now(),
+            postedBy: "Admin",
+            isPublishedGlobally: true,
           });
         }
       } catch (error) {

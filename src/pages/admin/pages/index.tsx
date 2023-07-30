@@ -56,7 +56,7 @@ export default function DetailPage() {
 
   return (
     <div className={classes.container}>
-      <Header id={accommodation.id} category={accommodation.category}></Header>
+      <Header id={accommodation.id} category={accommodation.category} blogTitle={""}></Header>
     </div>
   );
 }

@@ -6,6 +6,7 @@ interface Headerprops {
   id: string;
   category: string;
   urlArray?: string[];
+  blogTitle: string;
 }
 
 export default function Header({ id, category, urlArray }: Headerprops) {

@@ -106,8 +106,7 @@ export default function AboutSG() {
       <Header
         title={header.title}
         description={header.description}
-        imageUrl={header.imageUrl}
-      />
+        imageUrl={header.imageUrl} height={""}      />
       <div className={classes.sectionsContainer}>
         <div className={classes.sectionContainer}>
           {sections.map((section, index) => {

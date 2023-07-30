@@ -35,7 +35,7 @@ export default function AccommodationCompare() {
 
   return (
     <div className={classes.all}>
-        <Header title={accommodationCompareHeader.title} description={accommodationCompareHeader.description} imageUrl={accommodationCompareHeader.imageUrl}></Header>
+        <Header title={accommodationCompareHeader.title} description={accommodationCompareHeader.description} imageUrl={accommodationCompareHeader.imageUrl} height={""}></Header>
         <AccommodationCompareList></AccommodationCompareList>
     </div>
   )
