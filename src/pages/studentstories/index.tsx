@@ -1,4 +1,4 @@
-import { TableRow, TableCell, Button, Grid } from "@mui/material";
+import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
 import { FunctionComponent, useEffect, useState } from "react";
 import Image from 'next/image';
@@ -25,7 +25,8 @@ const IndexPage: FunctionComponent<indexPageProps> = () => {
     const [headerurl, setheaderurl] = useState("");
     const [name, setname] = useState("");
     const [description, setdescription] = useState("");
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     const listblogs = async () => {
         const querySnapshot = await getDocs(collection(getFirestore(), "blogs"));
         const blogs = [] as article[];
@@ -75,50 +76,53 @@ const IndexPage: FunctionComponent<indexPageProps> = () => {
 
     }, []);
 
+
     return (<div style={{ backgroundColor: '#D9E0E5' }}>
-        {
-            headerurl &&
-            <div style={{ position: 'relative', width: '100%', height: '400px' }}>
-                <img style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    src={headerurl}
-                    alt="Header Image"
-                />
-                <div style={{ position: 'absolute', top: '50%', left: '10%', color: 'white' }}>
-                    <h1>{name}</h1>
-                    {description}
+        <div style={{ backgroundColor: '#D9E0E5' }}>
+            {
+                headerurl &&
+                <div style={{ position: 'relative', width: '100%', height: isMobile ? '200px' : '400px' }}>
+                    <img style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                        src={headerurl}
+                        alt="Header Image"
+                    />
+                    <div style={{ position: 'absolute', top: isMobile ? '20%' : '50%', left: isMobile ? '5%' : '10%', color: 'white' }}>
+                        <h1>{name}</h1>
+                        {description}
+                    </div>
                 </div>
+            }
+            <div style={{ fontSize: '30px', fontWeight: 'bold', color: '#565F76', paddingLeft: isMobile ? '20px' : '120px', paddingTop: '70px' }}>
+                Recommended For You
             </div>
-        }
-        <div style={{ fontSize: '30px', fontWeight: 'bold', color: '#565F76', paddingLeft: '120px', paddingTop: '70px' }}>
-            Recommended For You
+            <Grid container spacing={isMobile ? 1 : 2} justifyContent="center" style={{ padding: isMobile ? '0 20px' : '0 120px' }}>
+                {filtered
+                    .filter(article => article.published)
+                    .map((article) => (
+                        <Grid key={article.slug} item xs={isMobile ? 12 : 12} sm={isMobile ? 6 : 6} md={4}>
+                            <Link href={`/studentstories/${article.slug}`}>
+                                <div style={{ backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: isMobile ? 300 : 450, padding: '10px', borderRadius: '15px' }}>
+                                    <div style={{ width: '100%', height: isMobile ? '60%' : '80%', overflow: 'hidden', position: 'relative', borderRadius: '15px 15px 15px 15px' }}>
+                                        <img src={article.imageurl} alt="Article Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }}></img>
+                                    </div>
+                                    <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
+                                        <div style={{ fontWeight: 'bold', textAlign: 'left', color: '#9E928B' }}>{
+                                            article.title
+                                        }</div>
+                                        <div style={{ marginTop: '5px', textAlign: 'left', color: '#9E928B' }}>{
+                                            article.name
+                                        }</div>
+                                    </div>
+                                </div>
+                            </Link>
+                        </Grid>
+                    ))
+                }
+            </Grid>
+
+
+
         </div>
-        <Grid container spacing={2} justifyContent="left" style={{ padding: '0 120px' }}>{
-            filtered
-                .filter(article => article.published)
-                .map((article) => (
-                    <Grid key={article.slug} item xs={12} md={4}>
-                        <Link href={`/studentstories/${article.slug}`}>
-                            <div style={{ backgroundColor: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 450, padding: '10px', borderRadius: '15px' }}>
-                                <div style={{ width: '100%', height: '80%', overflow: 'hidden', position: 'relative', borderRadius: '15px 15px 15px 15px' }}>
-                                    <img src={article.imageurl} alt="Article Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }}></img>
-                                    {/* <Image src={filtered.length > 0 ? filtered[0].imageurl : '/placeholder.jpg'} alt="Article Image" layout="fill" objectFit="cover" /> */}
-                                </div>
-                                <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
-                                    <div style={{ fontWeight: 'bold', textAlign: 'left', color: '#9E928B' }}>{
-                                        article.title
-                                    }</div>
-                                    <div style={{ marginTop: '5px', textAlign: 'left', color: '#9E928B' }}>{
-                                        article.name
-                                    }</div>
-                                </div>
-                            </div>
-                        </Link>
-
-                    </Grid>
-                ))
-        }</Grid>
-
-
     </div>);
 }
 

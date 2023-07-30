@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import LoginIcon from '@mui/icons-material/Login';
 import styles from './login.module.css'
 import { useRouter } from "next/router";
+import adminlogin from '../images/adminlogin.png'
 interface loginProps {
 
 }
@@ -30,7 +31,7 @@ const Login: FunctionComponent<loginProps> = () => {
         <div className={styles.background}>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                <div style={{backgroundImage: `url(/loginpage2.png)`, width: 1000, height: 1000}}></div>
+                <div style={{backgroundImage: `url(${adminlogin.src})`, width: 1000, height: 1000, backgroundSize: 'cover'}}></div>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <form onSubmit={(e) => handleSubmit(e)}>
