@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from "./industryChapterItem.module.css";
+import classes from "./IndustryChapterItem.module.css";
 import Link from "next/link";
 
 interface IndustryChapter {
