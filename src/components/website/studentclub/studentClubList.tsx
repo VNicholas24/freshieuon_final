@@ -41,7 +41,9 @@ export default function studentClubList() {
   // Call getStudentClubs in useEffect or any other appropriate place to fetch the data
 
   useEffect(() => {
-    getStudentClubs();
+    setTimeout(() => {
+      getStudentClubs();
+    }, 100);
   }, []);
 
   if (studentClubs.length === 0) {

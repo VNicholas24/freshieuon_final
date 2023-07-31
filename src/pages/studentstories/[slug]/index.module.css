@@ -16,6 +16,10 @@
     color: #498999;
 }
 
+.markdown p {
+    margin-bottom: 25px;
+}
+
 .name {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;

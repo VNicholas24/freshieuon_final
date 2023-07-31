@@ -95,7 +95,7 @@ const IndexPage: FunctionComponent<indexPageProps> = () => {
             <div style={{ fontSize: '30px', fontWeight: 'bold', color: '#565F76', paddingLeft: isMobile ? '20px' : '120px', paddingTop: '70px' }}>
                 Recommended For You
             </div>
-            <Grid container spacing={isMobile ? 1 : 2} justifyContent="center" style={{ padding: isMobile ? '0 20px' : '0 120px' }}>
+            <Grid container spacing={isMobile ? 1 : 2} justifyContent="left" style={{padding: isMobile ? '0 20px' : '0 120px', paddingBottom: 20 }}>
                 {filtered
                     .filter(article => article.published)
                     .map((article) => (
