@@ -1,6 +1,7 @@
 import Header from "@/components/website/aboutSchool/header";
 import classes from "./index.module.css";
 import ServiceItemList from "@/components/website/aboutSchool/serviceList";
+import "tailwindcss/tailwind.css";
 import "firebase/firestore";
 import { useEffect, useState, useCallback } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";

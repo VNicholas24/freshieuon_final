@@ -1,6 +1,7 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { TextField, Input, makeStyles, Button, Modal } from "@mui/material";
 import classes from "./renderedSection.module.css";
+import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import {
   collection,

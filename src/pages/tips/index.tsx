@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Header from "../../components/website/accommodation/header"
 import classes from "./index.module.css"
-
+import 'tailwindcss/tailwind.css';
 import "firebase/firestore";
 import { useEffect, useState, useCallback } from "react";
 import { Grid } from '@mui/material';

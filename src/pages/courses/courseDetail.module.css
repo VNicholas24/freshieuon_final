@@ -1,21 +1,24 @@
 .all {
-  position: relative;
+  display: flex;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 60px;
+  color: #272b40;
+  width: 200px;
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
   border-radius: 12px;
   padding: 16px;
+  background-color: aliceblue;
 }
 
 .subtitle {
   padding: 8px 0px;
   font-size: 1.1rem;
-  color: darkred
+  color: darkred;
 }
 
 .cardcontent {
@@ -28,5 +31,5 @@
 }
 
 .text {
-  white-space: pre-line
+  white-space: pre-line;
 }

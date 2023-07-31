@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import classes from "./detailedPageSection.module.css";
+import "tailwindcss/tailwind.css";
 import {
   Timestamp,
   addDoc,
