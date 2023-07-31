@@ -1,10 +1,14 @@
 .container {
-    width: 100%;
-    height: 1920px;
-    display: absolute;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background-color: white;
+  width: 100%;
+  height: 1920px;
+  display: absolute;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.video {
+  margin-bottom: -10px;
 }

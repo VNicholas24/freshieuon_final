@@ -63,3 +63,21 @@
   position: absolute;
   color: #1e3356;
 }
+
+@media (max-width: 800px) {
+  .headerTitle {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 38px; /* Updated font size */
+    width: 230px;
+    margin-left: 10px;
+  }
+
+  .dialogueText {
+    text-align: center;
+    font-size: 50px; /* Updated font size */
+    font-weight: bold;
+    position: absolute;
+    color: #1e3356;
+  }
+}

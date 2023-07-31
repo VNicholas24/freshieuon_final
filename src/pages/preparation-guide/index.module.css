@@ -365,7 +365,7 @@
   background-color: white;
 }
 
-@media (max-width: 1168px) {
+@media (max-width: 708px) {
   .section {
     display: flex;
     flex-direction: column-reverse;
@@ -394,5 +394,17 @@
 
   .sectionDescription {
     width: 80%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    width: 60%;
   }
 }

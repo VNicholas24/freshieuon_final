@@ -110,6 +110,13 @@ const ToDoDetailPage: React.FC = () => {
           todo.actions.push(action);
         });
 
+        todo.actions.sort((actionA, actionB) => {
+          const numA = parseInt(actionA.name.split(".")[0]);
+          const numB = parseInt(actionB.name.split(".")[0]);
+
+          return numA - numB;
+        });
+
         setTodo(todo);
       } else {
         console.log("Todo does not exist");

@@ -91,6 +91,7 @@
 
   .sectionContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
   }

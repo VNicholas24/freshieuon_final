@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import classes from "./topNavBar.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import { useRouter } from "next/router";
+import { Menu } from "@mui/icons-material";
 
 interface TopNavBarProps {
   children: React.ReactNode;
@@ -15,8 +16,6 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ children }) => {
   console.log(link, "hi");
 
   const handleMouseEnter = (link: string) => {
-    // Check if the provided link starts with the activeLink value
-    // If it does, set the activeLink to the main link
     if (link.startsWith("about")) {
       setActiveLink("about");
     } else if (link.startsWith("academic")) {
@@ -44,6 +43,45 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ children }) => {
         <h3 className={classes.title}>
           Freshie <sup className={classes.titleSup}>UON</sup>
         </h3>
+        <div className={`navbar ${classes.mobile}`}>
+          <div
+            className={classes.hamburgerMenu}
+            onClick={() =>
+              setActiveLink(activeLink === "hamburger" ? "" : "hamburger")
+            }
+          >
+            <Menu
+              className={`${classes.hamburgerIcon} ${
+                activeLink === "hamburger" ? classes.active : ""
+              }`}
+            />
+            <span
+              className={`${classes.hamburgerLabel} ${
+                activeLink === "hamburger" ? classes.active : ""
+              }`}
+            >
+              Menu
+            </span>
+          </div>
+          {activeLink === "hamburger" && (
+            <div className={classes.mobileMenu}>
+              <a href="/">Home</a>
+              <a href="/aboutus">About Us</a>
+              <a href="/aboutSchool">About School</a>
+              <a href="/courses">Courses</a>
+              <a href="/tips">Tips & Tricks</a>
+              <a href="/preparation-guide">Preparation Guide</a>
+              <a href="/getting-around-sg">Getting Around SG</a>
+              <a href="/getting-around-campus">Getting Around Campus</a>
+              <a href="/accommodation">Accommodation</a>
+              <a href="/studentclub">Student Club</a>
+              <a href="/studentstories">Student Stories</a>
+              <a href="/support">Support</a>
+              <a href="/faq">Faq</a>
+              <a href="/testimonial">Testimonials</a>
+            </div>
+          )}
+        </div>
         <div className={classes.navbar}>
           <div
             className={`${classes.linkContainer} ${
