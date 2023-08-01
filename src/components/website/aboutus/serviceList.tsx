@@ -40,7 +40,9 @@ export default function ServiceList() {
   };
 
   useEffect(() => {
-    getServiceItems();
+    setTimeout(() => {
+      getServiceItems();
+    }, 100);
   }, []);
 
   if (serviceItems.length === 0) {

@@ -366,6 +366,10 @@
 }
 
 @media (max-width: 708px) {
+  .container {
+    width: 100% !important;
+  }
+
   .section {
     display: flex;
     flex-direction: column-reverse;

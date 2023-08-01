@@ -73,11 +73,20 @@
     margin-left: 10px;
   }
 
+  .dialogueRectangle {
+    display: none;
+  }
+
   .dialogueText {
+    display: none;
     text-align: center;
     font-size: 50px; /* Updated font size */
     font-weight: bold;
     position: absolute;
     color: #1e3356;
+  }
+
+  .dialogueTriangle {
+    display: none;
   }
 }

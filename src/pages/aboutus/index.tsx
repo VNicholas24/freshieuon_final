@@ -50,7 +50,7 @@ export default function AboutUs() {
       collection(getFirestore(), "aboutus-page")
     );
     querySnapshot.forEach((doc) => {
-      if (doc.id == ("aboutus-testimonials")) {
+      if (doc.id == "aboutus-testimonials") {
         const videoUrl = doc.data().videoUrl;
         const id = videoUrl.split("/")[3];
         setTitle(doc.data().title);

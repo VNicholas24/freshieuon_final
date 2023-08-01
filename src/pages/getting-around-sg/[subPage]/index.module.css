@@ -92,10 +92,14 @@
 }
 
 @media (max-width: 1168px) {
+  .all {
+    width: min-content;
+  }
   .section {
     display: flex;
     flex-direction: column-reverse;
     height: auto;
+    width: 100%;
   }
 
   .leftContainer,
