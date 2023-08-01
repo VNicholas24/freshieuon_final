@@ -28,6 +28,8 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ children }) => {
       setActiveLink("support");
     } else if (link.startsWith("testimonial")) {
       setActiveLink("testimonial");
+    } else if (link.startsWith("faq")) {
+      setActiveLink("faq");
     } else {
       setActiveLink("home");
     }
@@ -194,6 +196,14 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ children }) => {
             <a className={classes.link} href="/support">
               Support
             </a>
+          </div>
+          <div
+            className={`${classes.linkContainer} ${
+              activeLink === "faq" ? classes.active : ""
+            }`}
+            onMouseEnter={() => handleMouseEnter("faq")}
+            onMouseLeave={handleMouseLeave}
+          >
             <a className={classes.link} href="/faq">
               Faq
             </a>
