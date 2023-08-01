@@ -28,9 +28,10 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
     setHovered(false);
   };
 
-  if(!service.pageURL){
-    service.pageURL = ""
+  if (!service.pageURL) {
+    service.pageURL = "";
   }
+  console.log(service.iconUrl);
   return (
     <Link href={service.pageURL} passHref>
       <div
@@ -41,7 +42,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className={classes.contentContainer}>
-          <img className={classes.image} src={service.iconurl} alt="Image" />
+          <img className={classes.image} src={service.iconUrl} alt="Image" />
           <h2 className={classes.title}>{service.title}</h2>
           <div
             className={`${classes.descriptionContainer} ${

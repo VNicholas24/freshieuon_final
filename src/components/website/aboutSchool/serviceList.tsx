@@ -13,8 +13,8 @@ export interface serviceList {
   description: string;
   imageURL: string;
   pageURL: string;
-  iconurl: string;
-  pageurl: string;
+  iconUrl: string;
+  pageUrl: string;
 }
 
 export default function ServiceList() {
@@ -27,12 +27,15 @@ export default function ServiceList() {
       );
       const serviceItems = [] as serviceList[];
       querySnapshot.forEach((doc) => {
+        console.log(doc.data().iconUrl);
         let docSlug = doc.id;
         if (docSlug.startsWith("picture-and-text")) {
           serviceItems.push({
             id: doc.id,
-            ...doc.data(),
+            description: doc.data().description,
             title: doc.data().title,
+            iconUrl: doc.data().iconUrl,
+            imageURL: doc.data().imageURL,
           } as serviceList);
         }
       });
@@ -46,8 +49,8 @@ export default function ServiceList() {
 
   useEffect(() => {
     setTimeout(() => {
-        getServiceItems();
-    }, 100);  
+      getServiceItems();
+    }, 100);
   }, []);
 
   if (serviceItems.length === 0) {

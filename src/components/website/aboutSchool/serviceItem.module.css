@@ -9,8 +9,8 @@
 
 .title {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 50%; /* Center vertically */
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
@@ -35,6 +35,12 @@
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.serviceContainer:hover .image {
+  background-color: rgba(0, 0, 0, 0); /* Remove dark overlay on hover */
 }
 
 .descriptionContainer {
