@@ -3,6 +3,8 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import classes from "./header.module.css";
 import "firebase/firestore";
 import { Button } from "@mui/material";
+import { useRouter } from "next/router";
+
 
 interface HeaderProps {
   title: string;
@@ -34,6 +36,8 @@ const Header: React.FC<HeaderProps> = ({
   });
   const [banner, setBanner] = useState<Banner[]>([]);
   const [midContent, setMidContent] = useState<MidContent[]>([]);
+  const router = useRouter();
+
 
   const getBanner = async () => {
     const querySnapshot = await getDocs(
@@ -75,6 +79,10 @@ const Header: React.FC<HeaderProps> = ({
     }, 100);
   }, []);
 
+  const handleRedirect = () => {
+    router.push("/preparation-guide"); 
+  };
+
   return (
     <div
       className={classes.background}
@@ -86,7 +94,11 @@ const Header: React.FC<HeaderProps> = ({
     >
       <h1 className={classes.title}>{title}</h1>
       <p className={classes.description}>{description}</p>
-      <Button className={classes.buttonContainer} variant="contained">
+      <Button className={classes.buttonContainer} 
+              variant="contained"
+              onClick={() => {
+                handleRedirect();
+              }}>
         Learn More
       </Button>
       <h3 className={classes.subTitle}>{subTitle}</h3>
