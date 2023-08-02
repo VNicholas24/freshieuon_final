@@ -56,6 +56,7 @@
   color: #000000;
   background-color: #b3cad1;
   border-radius: 100px;
+  z-index: 1;
 }
 .buttonContainer:hover {
   background-color: white;
