@@ -18,7 +18,6 @@ interface MidContent {
   id: string;
   imageUrl: string;
   description: string;
-  videoUrl: string;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -65,7 +64,6 @@ const Header: React.FC<HeaderProps> = ({
         id: doc.id,
         imageUrl: doc.data().imageUrl,
         description: doc.data().description,
-        videoUrl: doc.data().videoUrl,
       } as MidContent);
     });
     setMidContent(midContent);

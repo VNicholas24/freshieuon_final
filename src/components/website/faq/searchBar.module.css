@@ -17,4 +17,23 @@
     position: absolute;
     border-radius: 90px;
 }
+
+@media (max-width: 768px) {
+    .search-bar {
+        top: 355px;
+        left: 30px;
+        width: 400px;
+        height: 45px;
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    .searchIcon {
+        top: 360px;
+        left: 400px;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        border-radius: 90px;
+    }
+}
   

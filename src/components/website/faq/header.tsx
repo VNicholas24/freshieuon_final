@@ -12,27 +12,6 @@ interface HeaderProps {
 }
 
     const Header: React.FC<HeaderProps> = ({ title,imageUrl,title2,title3, }) => {
-      /*const [faqHeader, setFaqHeader] = useState<HeaderProps>({title:"",imageUrl:"",title2:"",title3:""});
-
-      const getFaqHeader = async() =>{
-      const querySnapshot = await getDocs(collection(getFirestore(), "faq-header"));
-      console.log(querySnapshot.docs);
-      const faqHeader : HeaderProps = {
-        title:querySnapshot.docs[0].data().title,
-        imageUrl:querySnapshot.docs[0].data().imageUrl,
-        title2:querySnapshot.docs[0].data().title2,
-        title3:querySnapshot.docs[0].data().title3,
-      }
-      
-      setFaqHeader(faqHeader)
-      console.log(faqHeader)
-    }
-  
-    useEffect(() => {
-      setTimeout(()=>{
-          getFaqHeader()
-      },100)
-    }, []);*/
 
     
     return (

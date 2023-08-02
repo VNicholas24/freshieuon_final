@@ -48,20 +48,21 @@
     flex-direction: row;
     height: 197px;
     left: 11.2%;
-    right: 57.9%;
   }
   .leftPost .description1{
+    flex-direction: row;
     height: 197px;
     width: 500px;
     left: 11.2%;
-    right: 57.9%;
     padding-top: 55px;
   }
   .leftPost .imageUrl1{
+    flex-direction: row;
     padding-left: 800px;
   }
   .leftPost .button1{
-    margin-top: 19.5%;
+    flex-direction: row;
+    margin-top: 300px;
     width: 300px;
     height: 40px;
     left: 175px;
@@ -70,24 +71,24 @@
   .rightPost .title1 {
     flex-direction: row-reverse;
     height: 197px;
-    right: 11.2%;
     left: 57.9%;
   }
   .rightPost .description1{
+    flex-direction: row-reverse;
     height: 197px;
     width: 500px;
-    right: 11.2%;
     left: 57.9%;
     padding-top: 55px;
   }
   .rightPost .imageUrl1{
+    flex-direction: row-reverse;
     padding-left: 11.2%;
   }
   .rightPost .button1{
-    margin-top: 19.5%;
+    flex-direction: row-reverse;
+    margin-top: 300px;
     width: 300px;
     height: 40px;
-    right: 11.2%;
     left: 57.9%;
   }
 .button1{
@@ -99,8 +100,81 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
-    z-index: 4;
+    z-index: 1;
 }
 .button1:hover{
     background-color: #B3CAD1;
+}
+/* Tablets and larger screens */
+@media (max-width: 768px) {
+  .videoContainer {
+    height: max-content;
+    width: 100%;
+  }
+  .title1{
+    font-size: 22px;
+    width: 500px;
+  }
+  .description1{
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .imageUrl1{
+    width: 200px;
+    height: 200px;
+  }
+
+  .leftPost .title1 {
+    flex-direction: row;
+    height: 197px;
+    left: 10px;
+    right: 57.9%;
+  }
+  .leftPost .description1{
+    flex-direction: row;
+    height: 197px;
+    width: 250px;
+    left: 10px;
+    right: 57.9%;
+    padding-top: 40px;
+  }
+  .leftPost .imageUrl1{
+    flex-direction: row;
+    padding-left: 270px;
+  }
+  .leftPost .button1{
+    flex-direction: row;
+    margin-top: 190px;
+    width: 180px;
+    height: 25px;
+    left: 5px;
+  }
+  
+  .rightPost .title1 {
+    flex-direction: row-reverse;
+    height: 197px;
+    left: 235px;
+  }
+  .rightPost .description1{
+    flex-direction: row-reverse;
+    height: 197px;
+    width: 250px;
+    left: 235px;
+    padding-top: 40px;
+  }
+  .rightPost .imageUrl1{
+    flex-direction: row-reverse;
+    padding-left: 20px;
+  }
+  .rightPost .button1{
+    flex-direction: row-reverse;
+    margin-top: 190px;
+    width: 180px;
+    height: 25px;
+    left: 235px;
+  }
+.button1{
+    font-weight: 500;
+    font-size: 13px;
+}
 }
