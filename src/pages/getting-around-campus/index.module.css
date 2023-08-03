@@ -72,7 +72,7 @@
   height: 600px;
   margin-top: 100px;
 }
-@media (max-width: 1168px) {
+@media (max-width: 1284px) {
   .all {
     width: 100%;
   }

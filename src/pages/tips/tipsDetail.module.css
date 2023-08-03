@@ -15,7 +15,7 @@
 .subtitle {
   padding: 8px 0px;
   font-size: 1.1rem;
-  color: darkred
+  color: darkred;
 }
 
 .cardcontent {
@@ -28,10 +28,10 @@
 }
 
 .text {
-  white-space: pre-line
+  white-space: pre-line;
 }
 
-.container{
+.container {
   background-color: antiquewhite;
   background-position: 0% 6%;
   background-size: cover;
@@ -45,18 +45,18 @@
   text-align: center;
 }
 
-.headerTitle{
+.headerTitle {
   font-size: 28px;
   font-weight: 440;
 }
 
-.headerDescription{
+.headerDescription {
   margin-top: 50px;
   line-height: 150%;
   font-weight: 350;
   word-spacing: 10%;
 }
 
-.gridContainer{
+.gridContainer {
   max-width: 80vw;
 }

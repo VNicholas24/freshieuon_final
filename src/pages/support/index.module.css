@@ -9,7 +9,7 @@
 }
 
 /* Phones and larger screens */
-@media (max-width: 768px) {
+@media (max-width: 1284px){
   .container {
     width: 100%;
     height: 250px;  

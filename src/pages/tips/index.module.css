@@ -4,9 +4,14 @@
 }
 
 .card {
+  margin: auto;
+  position: relative;
   height: 100%;
-  display: flex;
-  align-items: center;
+  margin-top: 70px;
+  padding: 100px;
+  background-color: #ecefed;
+  box-shadow: 2px 2px 3px #888;
+  max-width: 550px;
 }
 
 .cards {
@@ -16,7 +21,9 @@
 
 .cardTitle {
   height: 3.2em;
-  line-height: 1.2em;
+  color: #565f76;
+  font-weight: 400;
+  line-height: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -32,4 +39,47 @@
 
 .content {
   color: brown;
+}
+
+/* For screens smaller than 768px (typical mobile view) */
+@media only screen and (max-width: 1284px) {
+  .cards {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardTitle {
+    height: auto;
+    line-height: 1.4em;
+    display: block;
+  }
+}
+
+/* For screens larger than 768px (tablet and desktop view) */
+@media only screen and (min-width: 768px) {
+  .cards {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cardTitle {
+    height: 3.2em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }

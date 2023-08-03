@@ -6,7 +6,7 @@
   box-sizing: content-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1284px) {
   .all {
     width: 100%;
   }

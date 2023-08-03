@@ -65,7 +65,7 @@
 }
 
 /* Media Query for Small Screens */
-@media (max-width: 900px) {
+@media (max-width: 1284px) {
   .markdown {
     font-size: 16px;
     max-width: 100%;
