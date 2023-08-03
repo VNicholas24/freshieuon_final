@@ -36,7 +36,6 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
         const storage = getStorage();
         const storageRef = ref(storage, `testimonials/${title}`);
 
-        // 'file' comes from the Blob or File API
         const snapshot = await uploadBytes(storageRef, video!)
         const vidurl = await getDownloadURL(snapshot.ref);
         await setDoc(doc(getFirestore(), "testimonials", title), {
@@ -81,7 +80,7 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
         const docRef = doc(getFirestore(), "testimonials", title);
         await deleteDoc(docRef);
         console.log(docRef);
-        
+
         getData();
     }
     const handleDialogOpen = (video: Video) => {
@@ -96,39 +95,33 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
         setCurrentVideo(null);
         setNewTitle("");
         setNewVideo(null);
-        setNewVideolocalurl(""); // clear newVideolocalurl
+        setNewVideolocalurl("");
     };
 
 
     const handleUpdate = async (newTitle: string, newVideo: File | null) => {
-        // Check if title was changed
         if (newTitle !== currentVideo!.title) {
-            // If title changed, delete the old document
             const oldDocRef = doc(getFirestore(), "testimonials", currentVideo!.title);
             await deleteDoc(oldDocRef);
         }
-    
-        // Create a new document or update existing one with the new title
+
         const docRef = doc(getFirestore(), "testimonials", newTitle);
-        
-        // If a new video has been uploaded, update the video in Storage
+
         if (newVideo) {
             const storage = getStorage();
             const storageRef = ref(storage, `testimonials/${newTitle}`);
             const snapshot = await uploadBytes(storageRef, newVideo);
             const vidurl = await getDownloadURL(snapshot.ref);
-    
-            // Update the video URL in the Firestore document
+
             await setDoc(docRef, { title: newTitle, videourl: vidurl });
         } else {
-            // If video wasn't changed, just update the title
             await setDoc(docRef, { title: newTitle, videourl: currentVideo!.videourl });
         }
-        
+
         setNewVideolocalurl("");
         handleDialogClose();
-        getData(); // Refresh the data
-    };    
+        getData();
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -151,48 +144,6 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
 
             <Grid container spacing={2} style={{ backgroundColor: "#EBEEF0" }}>
                 <Grid item xs={12} xl={9} style={{ paddingLeft: "30px" }}>
-
-                    {/* <div style={{ color: "#6E94AF" }}>Title</div>
-                    <TextField
-                        fullWidth
-                        id="outlined-basic"
-                        variant="outlined"
-                        style={{ backgroundColor: "#FFFFFF" }}
-                        onChange={(e) => settitle(e.target.value)}
-                    /> */}
-
-                    {/* <div style={{ color: "#6E94AF", marginBottom: "10px", marginTop: "10px" }}>Upload Video:</div>
-                    <div style={{ backgroundColor: "#FFFFFF", padding: '30px', borderRadius: '4px', width: "100%" }}>
-                        <div style={{ backgroundColor: "#DCE2EA", borderRadius: '4px', padding: '30px', display: 'flex' }}>
-
-                            
-                            <div style={{ flex: 1, marginRight: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-                                    <div style={{ width: '250px' }}>
-                                        <Button style={{ margin: '0 0 10px 0', color: "#000000" }} variant="text" component="label">
-                                            Upload Video
-                                            <input
-                                                hidden
-                                                accept="video/*"
-                                                type="file"
-                                                onChange={(e) => {
-                                                    setvideo(e.target.files![0]);
-                                                    setvideolocalurl(URL.createObjectURL(e.target.files![0]));
-                                                }}
-                                            />
-                                        </Button>
-                                    </div>
-                                </div>
-
-                                <div style={{ marginBottom: '20px', width: '250px', marginLeft: '108px' }}>
-                                    <div style={{ position: "relative", width: "100%" }}>
-                                        <video controls src={videolocalurl} style={{ width: "100%", height: "100%" }} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-
 
                     <div style={{ color: "#6E94AF", marginBottom: "10px", marginTop: "20px" }}>Content</div>
                     <div style={{ backgroundColor: "#FFFFFF", padding: '50px', borderRadius: '4px', width: "100%" }}>
@@ -246,22 +197,7 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
 
                 {/* Save Button */}
                 <Grid item xs={12} xl={3} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end', paddingRight: '30px' }}>
-                    {/* <Button
-                        onClick={() => {
-                            postdata();
-                        }}
-                        style={{
-                            backgroundColor: '#86A7D3',
-                            marginTop: '20px',
-                            height: '56px',
-                            minWidth: '100px',
-                            padding: '16px 24px'
-                        }}
-                        variant="contained"
-                        startIcon={<SaveIcon />}
-                    >
-                        Save
-                    </Button> */}
+
                     <Dialog open={open} onClose={handleClose}>
                         <DialogTitle>Add new video</DialogTitle>
                         <DialogContent>
@@ -320,8 +256,6 @@ const AddTestimonial: FunctionComponent<addTestimonialProps> = () => {
                                 />
                             </Button>
 
-
-                            {/* Only show the current video if a new one hasn't been selected */}
                             {newVideo !== null ? (
                                 <video controls src={newVideolocalurl} style={{ width: "100%", height: "100%" }} />
                             ) : (

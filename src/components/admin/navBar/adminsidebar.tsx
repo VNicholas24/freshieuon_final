@@ -16,42 +16,36 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import BookIcon from '@mui/icons-material/Book';
+import TipsAndUpdatesIcon from '@mui/icons-material/Lightbulb';
+import SupportIcon from '@mui/icons-material/SupportAgent';
+import FaqIcon from '@mui/icons-material/HelpOutline';
+import HomeIcon from '@mui/icons-material/Home';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 interface AdminSidebarProps {
 
 }
 
 const drawerWidth = 280;
-// export const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
-//     open?: boolean;
-// }>(({ theme, open }) => ({
-//     flexGrow: 1,
-//     // padding: theme.spacing(3),
-//     transition: theme.transitions.create('margin', {
-//         easing: theme.transitions.easing.sharp,
-//         duration: theme.transitions.duration.leavingScreen,
-//     }),
-//     // marginLeft: `-${drawerWidth}px`,
-//     ...(open && {
-//         transition: theme.transitions.create('margin', {
-//             easing: theme.transitions.easing.easeOut,
-//             duration: theme.transitions.duration.enteringScreen,
-//         }),
-//         marginLeft: 0,
-//     }),
-// }));
 
 const AdminSidebar: FunctionComponent<AdminSidebarProps> = () => {
 
     const listItems = [
+        { icon: <HomeIcon />, text: 'Home', url: '/admin/pages/landing-page' },
         { icon: <PersonAddIcon />, text: 'Add Admins', url: '/admin/register' },
         { icon: <InfoIcon />, text: 'About Us', url: '/admin/pages/aboutus' },
+        { icon: <LocalLibraryIcon />, text: 'About School', url: '/admin/pages/aboutSchool' },
         { icon: <ApartmentIcon />, text: 'Accommodation', url: '/admin/pages/accommodation' },
         { icon: <SchoolIcon />, text: 'Getting Around Campus', url: '/admin/pages/getting-around-campus' },
         { icon: <PublicIcon />, text: 'Getting Around SG', url: '/admin/pages/getting-around-sg' },
+        { icon: <BookIcon />, text: 'Courses', url: '/admin/pages/courses' },
         { icon: <ListAltIcon />, text: 'Preparation Guide', url: '/admin/pages/preparation-guide' },
         { icon: <AutoStoriesIcon />, text: 'Student Stories', url: '/admin/pages/stories' },
         { icon: <GroupsIcon />, text: 'Student Club', url: '/admin/pages/studentclub' },
         { icon: <ReviewsIcon />, text: 'Testimonials', url: '/admin/pages/testimonial' },
+        { icon: <TipsAndUpdatesIcon />, text: 'Tips & Tricks', url: '/admin/pages/tips' },
+        { icon: <SupportIcon />, text: 'Support', url: '/admin/pages/support' },
+        { icon: <FaqIcon />, text: 'FAQ', url: '/admin/pages/faq' },
     ];
 
     const [openDialog, setOpenDialog] = useState(false);
