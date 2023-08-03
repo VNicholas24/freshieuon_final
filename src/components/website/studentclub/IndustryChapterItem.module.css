@@ -17,7 +17,7 @@
 .title {
   display: inline-flex;
   position: absolute;
-  left: 280px;
+  left: 260px;
   width: 40%;
   margin-top: 30px;
   padding-bottom: 0px;
@@ -28,9 +28,9 @@
 .subtitle {
   display: inline-flex;
   position: absolute;
-  left: 280px;
+  left: 260px;
   width: 30%;
-  margin-top: 120px;
+  margin-top: 140px;
   padding-bottom: 0px;
   font-weight: 400;
   font-size: 12px;

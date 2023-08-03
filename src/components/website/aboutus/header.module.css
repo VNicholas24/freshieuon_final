@@ -28,3 +28,23 @@
 .gridContainer{
     max-width: 80vw;
 }
+
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .headerTitle {
+      margin: auto;
+      padding: auto;
+      font-size: 30px;
+    }
+  
+    .headerDescription {
+      margin: auto;
+      padding: auto;
+      width: 100%;
+      margin-top: 2vw;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  

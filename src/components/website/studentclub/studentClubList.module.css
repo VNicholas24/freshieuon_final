@@ -10,3 +10,19 @@
   font-size: 20px;
   margin-top: 0px;
 }
+
+/* For screens smaller than 600px (typical mobile view) */
+@media only screen and (max-width: 800px) {
+  .studentClubListContainer {
+    padding-bottom: 50px;
+  }
+
+  .noStudentClubs {
+    height: 50vw; /* Adjust the height for better mobile display */
+    display: flex;
+    justify-content: center;
+    font-weight: 450;
+    font-size: 16px; /* Decrease font size for better readability on mobile */
+    margin-top: 20px; /* Add some space from the top for better layout */
+  }
+}
