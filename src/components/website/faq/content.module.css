@@ -1,23 +1,23 @@
 .faqContentContainer {
   margin-left: 450px;
   margin-top: 840px;
-  max-width: 600px; 
+  max-width: 600px;
   height: max-content;
   margin-bottom: 20px;
   background-color: rgba(250, 246, 241, 1);
 }
 
-.container1{
+.container1 {
   padding-top: 10px;
 }
-.questionContainer{
-  background: rgba(217, 217, 217, 0.20);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.questionContainer {
+  background: rgba(217, 217, 217, 0.2);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.answerContainer{
-  background: rgba(217, 217, 217, 0.20);
+.answerContainer {
+  background: rgba(217, 217, 217, 0.2);
 }
-.question{
+.question {
   padding: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
@@ -26,21 +26,19 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-size: 23px;
   font-style: Regular;
   text-align: left;
-  font-family: Work Sans;
   font-weight: 400;
   font-stretch: normal;
   text-decoration: none;
 }
 
-.answer{
-    margin-left: 5px;
-    padding: 5px;
-    color: rgba(117, 119, 127, 1);
+.answer {
+  margin-left: 5px;
+  padding: 5px;
+  color: rgba(117, 119, 127, 1);
   width: 593px;
   font-size: 18px;
   font-style: Regular;
   text-align: left;
-  font-family: Work Sans;
   font-weight: 400;
   font-stretch: normal;
   text-decoration: none;
@@ -50,25 +48,21 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   .faqContentContainer {
     margin-left: 70px;
     margin-top: 440px;
-
   }
-  .questionContainer{
+  .questionContainer {
     width: max-content;
   }
-  .answerContainer{
+  .answerContainer {
     width: max-content;
   }
-  .question{
+  .question {
     width: 300px;
     font-size: 15px;
     font-weight: 400;
   }
-  
-  .answer{
+
+  .answer {
     width: 300px;
     font-size: 12px;
   }
-  
 }
-
-

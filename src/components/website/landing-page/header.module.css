@@ -18,7 +18,7 @@
   height: 145px;
   left: 132px;
   top: 410px;
-  font-family: "Work Sans";
+
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -35,7 +35,6 @@
   height: 59px;
   left: 465px;
   top: 1250px;
-  font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 50px;
@@ -49,7 +48,6 @@
   height: 59px;
   left: 136px;
   top: 590px;
-  font-family: "Work Sans";
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -202,7 +200,7 @@
     padding-top: 130px;
     padding-left: 16px;
   }
-  
+
   .postContainer {
     position: relative;
     flex-basis: 30%;

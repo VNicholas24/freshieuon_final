@@ -71,8 +71,6 @@
 /* Title Styles */
 
 .title1 {
-  font-family: "Work Sans";
-
   font-weight: 600;
 
   font-size: 24px;
@@ -85,8 +83,6 @@
 /* Description Styles */
 
 .description1 {
-  font-family: "Work Sans";
-
   font-weight: 400;
 
   font-size: 16px;
@@ -122,8 +118,6 @@
   border: none;
 
   border-radius: 30px;
-
-  font-family: "Work Sans";
 
   font-weight: 700;
 
