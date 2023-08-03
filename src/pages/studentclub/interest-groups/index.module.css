@@ -1,4 +1,9 @@
 .all {
-    background-color: #e1edf0;
+  background-color: #e1edf0;
+}
+
+@media (max-width: 900px) {
+  .all {
+    width: 100%;
   }
-  
+}

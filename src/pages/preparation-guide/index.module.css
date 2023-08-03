@@ -365,7 +365,7 @@
   background-color: white;
 }
 
-@media (max-width: 708px) {
+@media (max-width: 900px) {
   .container {
     width: 100% !important;
   }

@@ -93,8 +93,9 @@
 
 @media (max-width: 1168px) {
   .all {
-    width: min-content;
+    width: 100%;
   }
+
   .section {
     display: flex;
     flex-direction: column-reverse;

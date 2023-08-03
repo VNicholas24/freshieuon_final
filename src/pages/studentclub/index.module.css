@@ -5,3 +5,9 @@
 .all * {
   box-sizing: content-box;
 }
+
+@media (max-width: 900px) {
+  .all {
+    width: 100%;
+  }
+}
