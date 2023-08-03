@@ -70,7 +70,7 @@
 }
 
 /* For screens smaller than 768px (typical mobile view) */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .studentClubContainer {
     display: flex;
     flex-wrap: wrap;
@@ -99,8 +99,8 @@
   .image {
     position: static;
     margin: 0 auto;
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 350px;
     margin-bottom: 30px;
   }
 

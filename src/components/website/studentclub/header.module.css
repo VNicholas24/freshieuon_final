@@ -30,7 +30,7 @@
 }
 
 /* Media Query for Small Screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .headerTitle {
     margin: auto;
     padding: auto;
